@@ -1,5 +1,5 @@
 // __tests__/math.test.js
-const { add, multiply, factorial } = require('../src/math');
+const { add, multiply, factorial,subtract } = require('../src/math');
 
 describe('add', () => {
   test('additionne deux nombres positifs', () => {
@@ -28,5 +28,14 @@ describe('factorial', () => {
   });
   test('lance une erreur pour un nombre négatif', () => {
     expect(() => factorial(-1)).toThrow('Nombre négatif');
+  });
+});
+// Ajoute à la fin du fichier
+describe('subtract', () => {
+  test('soustrait deux nombres', () => {
+    expect(subtract(10, 3)).toBe(7);
+  });
+  test('soustrait avec résultat négatif', () => {
+    expect(subtract(2, 5)).toBe(-3);
   });
 });
